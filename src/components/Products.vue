@@ -9,7 +9,7 @@
                         <th>Name</th>
                         <th>Price</th>
                         <th>Category</th>
-                        <th>title</th>
+                        <th></th>
                         
                     </tr>
                 </thead>
