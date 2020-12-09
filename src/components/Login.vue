@@ -6,7 +6,7 @@
             <form @submit.prevent="onSubmit"> 
 
                 <div class="form-group"><label for="exampleInputEmail1">Email address</label> 
-                <input type="email" id="exampleInputEmail1" required="required" placeholder="Enter email" value="test@mail.com" class="form-control" v-model="email"></div> 
+                <input type="email" id="exampleInputEmail1" required="required" placeholder="Enter email" value="test@mail.com" class="form-control" v-model="email" ></div> 
 
                 <div class="form-group"><label for="exampleInputPassword1">Password</label> 
                 <input type="password" id="exampleInputPassword1" placeholder="Password" required="required" value="asdfasdf" class="form-control" v-model="password"></div>
