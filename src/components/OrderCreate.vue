@@ -13,7 +13,7 @@
     </select>
     </div> 
  
-    <button type="submit" class="btn btn-primary">Submit Review</button>
+    <button type="submit" class="btn btn-primary">Submit Order</button>
     
     
      <button v-on:click="cancelOrder" type="clear" class="btn btn-outline-danger"> Cancel </button>
