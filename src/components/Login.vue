@@ -41,11 +41,20 @@ export default {
                 .then(myResponse=>{
                     console.log("Here is my response", myResponse);
                     
-                    this.$store.commit("storeTokenInApp", myResponse.data.token)
+                    this.$store.commit("storeTokenInApp", myResponse.data.token);
 
-                    this.$store.commit("storeUserInApp",myResponse.data.user)
+                    this.$store.commit("storeUserInApp",myResponse.data.user);
 
-                    this.$router.replace("/account")
+                    localStorage.setItem("token",myResponse.data.token);
+
+                    const now = new Date();
+                    const expirationDate = new Date(now.getTime() + 60*60*1000);
+                    
+                    localStorage.setItem("expiration", expirationDate)
+
+                    this.$store.dispatch("setLogoutTimer");
+
+                    this.$router.replace("/account");
                 })
                 .catch((myError)=>{
                     console.log("my error", myError.response.data)

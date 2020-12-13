@@ -28,11 +28,13 @@ export default {
   created(){
     console.log("App created")
     this.$store.dispatch("getProducts")
+    this.$store.dispatch("tryAutoLogin")
   }
 }
 </script>
 
 <style>
+
 /* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
